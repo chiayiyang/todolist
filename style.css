@@ -1,0 +1,213 @@
+html,
+body
+{
+    margin:0;
+    padding:0;
+    background-color:#2A2B2F ;
+    width:100%;
+    height:100%;
+    font-size: calc(15px + 0.390625vw);
+}
+
+
+.title
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff ;
+    font-size: 32px;
+}
+
+.sub-container
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: #979797;
+}
+
+.todo
+{
+    display: inline-flex;
+    flex-direction: column;
+    width: 352px;
+    height:auto;
+    border-radius: 4px;
+    background-color: #24262C;
+
+}
+
+.in-progress
+{
+    display: inline-flex;
+    flex-direction: column;
+    width: 352px;
+    height:auto;
+    border-radius: 4px;
+    background-color: #24262C;
+
+}
+
+.done
+{
+    display: inline-flex;
+    flex-direction: column;
+    width: 352px;
+    height: 100%;
+    border-radius: 4px;
+    background-color: #24262C;
+
+}
+
+.sub-title
+{
+    margin-top: 8px;
+    margin-left: 12px;
+    margin-bottom: 12px;
+    font-size: 16px;
+    
+}
+
+.taskarea
+{
+    display: inline-flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+
+}
+
+.taskcard
+{
+    display: flex;
+    flex-direction: row;
+    width: 320px;
+    height: 40px;
+    background-color: #292B31;
+    margin: 8px 16px;
+    border-radius: 4px;
+}
+
+.card-content
+{
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 2px 12px;
+
+}
+
+.card-title
+{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center; 
+    margin: 0 4px;
+    gap:12px;  
+
+}
+
+/* 調整 checkbox 的大小並保持垂直居中對齊 */
+input[type="checkbox"] {
+    width: 20px;  /* 設置 checkbox 的寬度 */
+    height: 20px; /* 設置 checkbox 的高度 */
+    margin: 0;
+
+}
+
+/* 當 checkbox 被選中時，給相鄰的 label 添加刪除線樣式 */
+input[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+}
+
+/* 調整文本的行高以保持垂直居中對齊 */
+label {
+    line-height: 20px;  /* 設置與 checkbox 相同的高度 */
+}
+
+
+.action-btn
+{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left:auto;
+    /* margin-right: 12px; */
+    gap: 4px;
+
+}
+
+/* 按钮樣式，只保留 SVG 底色 */
+button {
+    background: none; /* 移除背景色 */
+    border: none;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  /* SVG 圖標樣式，可以根據需要進行修改 */
+  button svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+    transition: fill 0.3s; /* 添加 fill 的過渡效果 */
+    padding: 0;
+  }
+  
+  /* 在 hover 時改變 SVG 圖標的填充顏色 */
+  button:hover {
+    fill: rgb(151, 151, 151,0.5); /* 修改為你想要的 hover 時的填充顏色 */
+  }
+
+
+
+  .add-taskcard
+  {
+      display: flex;
+      flex-direction: row;
+      width: 320px;
+      height: 40px;
+      border-radius: 4px;
+      border: 1px dashed #C0C4CC;
+      margin: 8px 16px;
+      border-radius: 4px;
+  }
+
+
+  .add-card-content
+{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 2px 8px;
+
+}
+
+  .add-card
+  {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center; 
+    margin: 0 4px;
+    gap:4px;
+    font-family: Inter;
+    color: #fff;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+/* 在 hover 時改變具有 add-card-content 類的 span 的樣式 */
+.add-taskcard :hover 
+{
+cursor: pointer;
+color: red; /* 修改為你想要的 hover 時的文字顏色 */
+font-weight: bold; /* 修改為你想要的 hover 時的字體粗細 */
+/* 其他樣式... */
+}

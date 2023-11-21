@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon_io/favicon-32x32.png">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h2>ToDo List 👋</h2>
+        </div>
+    </div>
+    <div class="sub-container">
+        <div class="todolist">
+            <div class="todo">
+                <span class="sub-title">TO DO (0)</span>
+                <div class="taskarea">
+                    <div class="taskcard">
+                        <span class="card-content">
+                            <div class="card-title">
+                                <input type="checkbox" id="scales" name="scales" checked />
+                                <label for="scales">content</label>
+                            </div>
+                            <span class="action-btn">
+                               <button><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#979797" d="M3 21v-4.25L16.2 3.575q.3-.275.663-.425t.762-.15q.4 0 .775.15t.65.45L20.425 5q.3.275.438.65T21 6.4q0 .4-.138.763t-.437.662L7.25 21H3ZM17.6 7.8L19 6.4L17.6 5l-1.4 1.4l1.4 1.4Z"/></svg></button> 
+                               <button><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="red" d="M7 21q-.825 0-1.413-.588T5 19V6H4V4h5V3h6v1h5v2h-1v13q0 .825-.588 1.413T17 21H7Zm2-4h2V8H9v9Zm4 0h2V8h-2v9Z"/></svg></button>
+                            </span>
+                        </span>
+                    </div>
+                    <div class="add-taskcard">
+                        <span class="add-card-content">
+                            <div class="add-card">
+                                <button><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#fff" d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10s10-4.477 10-10S17.523 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg></button>
+                            <p>Add New Task</p>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="in-progress">
+                <span class="sub-title">IN PROGRESS (0)</span>
+            </div>
+            <div class="done">
+                <span class="sub-title">DONE</span>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="app.js"></script>
+</html>
