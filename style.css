@@ -1,16 +1,16 @@
 html,
 body
 {
-    margin:0;
-    padding:0;
-    background-color:#2A2B2F ;
-    width:100%;
-    height:100%;
-    font-size: calc(15px + 0.390625vw);
+    margin:0 !important;
+    padding:0 !important;
+    background-color:#2A2B2F !important;
+    width:100% !important;
+    height:100% !important;
+    font-size: calc(15px + 0.390625vw) !important;
 }
 
 
-.title
+.mytitle
 {
     display: flex;
     align-items: center;
@@ -19,7 +19,7 @@ body
     font-size: 32px;
 }
 
-.sub-container
+.mysub-container
 {
     display: flex;
     flex-direction: row;
@@ -61,7 +61,7 @@ body
 
 }
 
-.sub-title
+.mysub-title
 {
     margin-top: 8px;
     margin-left: 12px;
@@ -74,6 +74,7 @@ body
 {
     display: inline-flex;
     flex-direction: column;
+    align-items: center;
     width: auto;
     height: auto;
 
@@ -83,11 +84,46 @@ body
 {
     display: flex;
     flex-direction: row;
-    width: 320px;
-    height: 40px;
+    width: 96%;
     background-color: #292B31;
-    margin: 8px 16px;
     border-radius: 4px;
+    padding: 8px 0;
+    margin: 4px;
+}
+
+.taskcard label {
+    display: flex;
+    align-items: center;
+}
+
+.taskcard input[type="text"] {
+    width: 80%; /* 設置 input 元素的寬度為父元素的80% */
+    padding: 5px; /* 可以添加一些內邊距以改進外觀 */
+    box-sizing: border-box; /* 包括內邊距和邊框在內的盒模型 */
+}
+
+.taskcard .btn-group {
+    display: flex;
+    align-items: center;
+}
+
+.taskcard .dropdown-menu {
+    margin-top: 5px; /* Adjust the spacing between the dropdown and the label */
+}
+
+/* Add the following rule to make sure the dropdown menu stays open on input focus */
+/* .taskcard input:focus + .btn-group .dropdown-menu {
+    display: block !important;
+} */ 
+
+.dropdown-menu.show {
+    display: inline-flex !important; 
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 4px !important;
+    width: 20px !important;
+    
 }
 
 .card-content
@@ -98,7 +134,6 @@ body
     justify-content: center;
     width: 100%;
     margin: 2px 12px;
-
 }
 
 .card-title
@@ -210,4 +245,85 @@ cursor: pointer;
 color: red; /* 修改為你想要的 hover 時的文字顏色 */
 font-weight: bold; /* 修改為你想要的 hover 時的字體粗細 */
 /* 其他樣式... */
+}
+.in-progress,
+.done {
+    display: inline-flex;
+    flex-direction: column;
+    width: 352px;
+    height: auto;
+    border-radius: 4px;
+    background-color: #24262C;
+}
+
+/* Add the following styles to make the sub-title look similar to ToDo section */
+.in-progress .sub-title,
+.done .sub-title {
+    margin-top: 8px;
+    margin-left: 12px;
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+/* Add the following styles to make the taskarea look similar to ToDo section */
+.in-progress .taskarea,
+.done .taskarea {
+    display: inline-flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+}
+
+/* Add the following styles to make the add-taskcard look similar to ToDo section */
+.in-progress .add-taskcard,
+.done .add-taskcard {
+    display: flex;
+    flex-direction: row;
+    width: 320px;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px dashed #C0C4CC;
+    margin: 8px 16px;
+    border-radius: 4px;
+}
+
+/* Add the following styles to make the add-card-content look similar to ToDo section */
+.in-progress .add-card-content,
+.done .add-card-content {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 2px 8px;
+}
+
+/* Add the following styles to make the add-card look similar to ToDo section */
+.in-progress .add-card,
+.done .add-card {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 4px;
+    gap: 4px;
+    font-family: Inter;
+    color: #fff;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+/* Add the following styles to make the hover effect similar to ToDo section */
+.in-progress .add-taskcard:hover,
+.done .add-taskcard:hover {
+    cursor: pointer;
+    color: red;
+    font-weight: bold;
+    /* Other styles... */
+}
+
+.btn-group>.btn {
+    position: relative !important;
+    flex: 1 1 auto !important;;
+    padding:4px !important;
 }
